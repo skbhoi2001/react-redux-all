@@ -1,0 +1,10 @@
+import { getValue } from "../utils/localStorage";
+
+export const initialState = {
+  count: 10,
+  todos: [],
+  auth: {
+    isUserLoggedIn: getValue("userToken") ? true : false,
+    userToken: getValue("userToken") || ""
+  }
+};
